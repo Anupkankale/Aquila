@@ -7,9 +7,17 @@
  */
 
 //To Check Style Sheet PAth WAs Working Or Not  
-//   echo '<pre>';
-//     print_r(get_template_directory());
-//     wp_die();
+    
+
+if ( ! defined('AQUILA_DIR_PATH')){
+    define('AQUILA_DIR_PATH', untrailingslashit( get_template_directory()));
+}
+// It is Used To Check Autoloader Working Or Not
+// echo '<pre>';
+//      print_r(AQUILA_DIR_PATH );
+//      wp_die();
+
+require_once AQUILA_DIR_PATH .'/inc/helpers/autoloader.php';
 
 function aquila_enqueue_script()
 {
