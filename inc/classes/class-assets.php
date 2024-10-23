@@ -1,5 +1,4 @@
 <?php
-
 /**
  * 
  * Enqueue theme Assets
