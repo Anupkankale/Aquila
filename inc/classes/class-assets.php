@@ -14,7 +14,7 @@ use AQUILA_THEME\Inc\Traits\Singleton;
 class Assets
 {
 
-    use Singleton;
+ use Singleton;
 
     protected function __construct()
     {
