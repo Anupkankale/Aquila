@@ -18,7 +18,7 @@ use AQUILA_THEME\Inc\Traits\Singleton;
     protected function __construct(){
         //load class
 
-        wp_die('hello');
+        
     }
     
     protected function set_hooks(){
