@@ -24,5 +24,16 @@ class AQUILA_THEME
         $this->setup_hooks();
     }
 
-    protected function setup_hooks() {}
+    protected function setup_hooks() {
+        /**
+         * Action
+         */
+        add_action('after_setup_theme',[ $this,'setup_theme']);
+
+        }
+
+        //Its Is Important For Custmization option in Them To Add Site Title
+        public function setup_theme(){
+          add_theme_support('title-tag');  
+        }
 }
