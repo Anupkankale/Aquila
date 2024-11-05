@@ -1,4 +1,5 @@
 <?php
+
 /**
  * 
  * Bootstrap the Theme.
@@ -20,6 +21,7 @@ class AQUILA_THEME
         //load class
 
         Assets::get_instance();
+        Menus::get_instance();
 
         $this->setup_hooks();
     }
@@ -57,11 +59,11 @@ class AQUILA_THEME
             ]
         );
 
-        add_theme_support( 'post-thumbnails' );
+        add_theme_support('post-thumbnails');
 
         add_theme_support('customize-selective-refresh-widgets');
 
-        add_theme_support( 'automatic-feed-links');
+        add_theme_support('automatic-feed-links');
 
         add_theme_support(
             'html5',
@@ -74,10 +76,19 @@ class AQUILA_THEME
                 'script',
                 'style',
             ]
-            );
+        );
 
-           add_editor_style();
-           
-        //    add_theme_support();
+        add_editor_style();
+
+        add_theme_support('wp-block-style');
+
+        //It Is Use For Full width Img like IMG Left or Right 
+        add_theme_support('align-wide');
+
+        //It Will Allow Width to set To The Contennt With the global 
+        global $content_width;
+        if (! isset($content_width)) {
+            $content_width = 1240;
+        }
     }
 }
