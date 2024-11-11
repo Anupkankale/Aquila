@@ -1,4 +1,5 @@
 <?php
+
 /**
  * 
  * Header Naviation template
@@ -7,17 +8,20 @@
  * 
  */
 
- 
 
- $menu_class = \AQUILA_THEME\Inc\Menus::get_instance();
- $menu_class->get_menu_id('aquila-header-menu'); 
+$menu_class = \AQUILA_THEME\Inc\Menus::get_instance();
+$header_menu_id = $menu_class->get_menu_id('aquila-header-menu');
+
+$header_menu = wp_get_nav_menu_items($header_menu_id);
+
+
 ?>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <?php 
-         if(function_exists('the_custom_logo')){
-          the_custom_logo();
-         }
+  <?php
+  if (function_exists('the_custom_logo')) {
+    the_custom_logo();
+  }
   ?>
   <a class="navbar-brand" href="#">Navbar</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,18 +47,8 @@
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
       </li>
-      
+
     </ul>
-    
+
   </div>
 </nav>
-
-
-<?php
-//  wp_nav_menu(
-//   [ 
-//     'theme_location' => 'aquila-header-menu',
-//     'container_class' => 'my_extra_menu_class'
-//     ]
-// );
-?>  

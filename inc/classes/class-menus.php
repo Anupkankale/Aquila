@@ -42,9 +42,14 @@ class Menus
         // Get All The Location Of Menue Inside the Function
         $locations = get_nav_menu_locations();
 
-         
+        // echo '<pre>';
+        // print_r($locations) ;
+        // wp_die();
+
         //Get Object ID My Location
         $menu_id = $locations [ $location];
+
+      
 
         return ! empty ($menu_id) ? $menu_id : '';
       
