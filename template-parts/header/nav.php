@@ -14,7 +14,6 @@ $header_menu_id = $menu_class->get_menu_id('aquila-header-menu');
 
 $header_menus = wp_get_nav_menu_items($header_menu_id);
 
-
 ?>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -105,9 +104,5 @@ $header_menus = wp_get_nav_menu_items($header_menu_id);
 <form class="form-inline my-2 my-lg-0">
 
 </form>
-
-
-
-
 </div>
 </nav>
